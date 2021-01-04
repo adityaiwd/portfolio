@@ -3,6 +3,7 @@ import GlobalStyle from "./theme/GlobalStyle";
 import Navbar from "./components/Navbar";
 import Container from "./layouts/Container";
 import Main from "./section/Main";
+import About from "./section/About";
 
 const index = () => {
   return (
@@ -11,6 +12,7 @@ const index = () => {
       <Navbar />
       <Container>
         <Main />
+        <About />
       </Container>
     </div>
   );

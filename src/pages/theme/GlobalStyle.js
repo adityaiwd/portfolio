@@ -24,7 +24,7 @@ body {
   background-color: #F7F7FF;
   background-size: cover;
   background-repeat: no-repeat;
-
+  
   min-height: 100vh;
 }
 `;

@@ -45,7 +45,7 @@ const Navbar = () => {
         <Nav>
             <NavLogo src={Logo} alt="logo"/>
             <Navigation>
-                <NavItem>About</NavItem>
+                <NavItem>About Me</NavItem>
                 <NavItem>Portfolio</NavItem>
                 <NavItem>Contact</NavItem>
             </Navigation>

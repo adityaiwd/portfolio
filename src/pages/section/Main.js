@@ -29,10 +29,9 @@ const SubTitle = styled.h3`
 const BackgroundLogo = styled.img`
     position:absolute !important;
     width:90rem;
-    top:10%;
     z-index:-1;
     opacity: 0.3;
-    right: -34%;
+    right: -38%;
     transform: rotate(-90deg);
 `
 
