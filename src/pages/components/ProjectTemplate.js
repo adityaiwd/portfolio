@@ -46,7 +46,6 @@ const ProjectTitle = styled.div`
   background-image: linear-gradient(to right, #17bebb, #1f7a8c);
   transform: skewX(-15deg);
   padding: 0.8rem 2rem;
-  /* border-radius: 10rem; */
 
   align-self: flex-start;
   & h1 {

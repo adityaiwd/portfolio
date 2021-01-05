@@ -5,6 +5,7 @@ import Container from "./layouts/Container";
 import Main from "./section/Main";
 import About from "./section/About";
 import Portfolio from "./section/Portfolio";
+import Contact from "./section/Contact";
 
 const index = () => {
   return (
@@ -15,6 +16,7 @@ const index = () => {
         <Main />
         <About />
         <Portfolio />
+        <Contact />
       </Container>
     </div>
   );
