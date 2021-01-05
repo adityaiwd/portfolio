@@ -12,7 +12,7 @@ const MainContainer = styled.header`
 `
 
 const Title = styled.h1`
-    font-weight:300;
+    font-weight:200;
     font-size: 7rem;
     width: 36rem;
 `

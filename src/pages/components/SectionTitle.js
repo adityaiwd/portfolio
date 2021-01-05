@@ -12,9 +12,9 @@ const Subtitle = styled.h3`
     font-weight:300;
 `
 
-const SectionTitle = ({title,subtitle}) => {
+const SectionTitle = ({title,subtitle,...rest}) => {
     return (
-        <div>
+        <div {...rest}>
             <Title>
                 {title}
             </Title>
