@@ -24,6 +24,11 @@ const Name = styled.span`
 
 const SubTitle = styled.h3`
     font-size: 1.8rem;
+    font-weight:200;
+    & span{
+        font-weight:700;
+        font-style:italic;
+    }
 `
 
 const BackgroundLogo = styled.img`
@@ -39,7 +44,7 @@ const Main = () => {
     return (
         <MainContainer>
             <Title>Hello <span role="img" aria-label="wave">👋🏼</span>, I’m <Name>Wicak</Name></Title>
-            <SubTitle>A Front-end Developer</SubTitle>
+            <SubTitle>An <span>Enthusiastic</span> Front-end Developer</SubTitle>
             <BackgroundLogo src={Logo} alt="logo" />
         </MainContainer>
     )

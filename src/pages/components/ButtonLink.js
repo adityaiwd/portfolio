@@ -3,10 +3,11 @@ import styled from "styled-components"
 
 const StyledButton = styled.a`
     border-radius: 10rem;
+    letter-spacing: 1.5px;
   font-size: 1rem;
-  padding: 1.2rem 2.8rem;
+  padding: 1.1rem 2.8rem;
   width:auto;
-  background-image: linear-gradient(to right,#17BEBB,#1F7A8C);
+  background-color: #17BEBB;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
@@ -15,21 +16,19 @@ const StyledButton = styled.a`
   cursor: pointer;
   transition: all 0.2s ease-out;
   display:flex;
-  align-self: center;
+  align-items: center;
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow:0px 15px 20px rgba(0,0,0,.25);
   }
   &:active {
     transform: translateY(1px);
-    box-shadow: 0 3px 10px rgba(0,0,0,.25);
   }
 `
 
 const ButtonLink = ({children,...rest}) => {
     return (
-        <StyledButton {...rest}>
+        <StyledButton target="_blank" rel="noopener noreferrer" {...rest}>
             {children}
         </StyledButton>
     )

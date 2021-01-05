@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Container from "./layouts/Container";
 import Main from "./section/Main";
 import About from "./section/About";
+import Portfolio from "./section/Portfolio";
 
 const index = () => {
   return (
@@ -13,6 +14,7 @@ const index = () => {
       <Container>
         <Main />
         <About />
+        <Portfolio />
       </Container>
     </div>
   );

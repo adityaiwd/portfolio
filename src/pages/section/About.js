@@ -4,9 +4,10 @@ import SectionTitle from "../components/SectionTitle";
 import { graphql, useStaticQuery } from "gatsby";
 import rehypeReact from "rehype-react";
 import ButtonLink from "../components/ButtonLink";
+import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
 
 const AboutWrapper = styled.div`
-  padding:13rem 0;
+  padding:10rem 0;
   display: flex;
   flex-direction: column;
   align-items:center;
@@ -67,7 +68,6 @@ const About = () => {
       }
     }
   `);
-  console.log(data);
   return (
     <AboutWrapper >
       <SectionTitle title="About Me" subtitle="Let me introduce myself" style={{alignSelf:"flex-start"}}/>
@@ -75,7 +75,7 @@ const About = () => {
       <StackTitle>My Current Stack of Languages/Technologies are :</StackTitle>
       <Stack>{data.file.childMarkdownRemark.frontmatter.stack}</Stack>
       <ButtonWrapper>
-        <ButtonLink><span role="img" aria-label="cv-paper">📝</span> CURRICULUM</ButtonLink>
+        <ButtonLink href="/CV.pdf"><InsertDriveFileIcon style={{marginRight:"1rem"}}/> CURRICULUM</ButtonLink>
       </ButtonWrapper>
     </AboutWrapper>
   );
