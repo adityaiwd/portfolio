@@ -56,7 +56,7 @@ const Contact = () => {
             <Email>adityad.wck@gmail.com</Email>
             <ContactIconWrapper>
                 <ContactIcon target="_blank" rel="noopener noreferrer" href="https://github.com/adityaiwd"><GitHubIcon fontSize="inherit"/></ContactIcon>
-                <ContactIcon target="_blank" rel="noopener noreferrer" href=""><LinkedInIcon fontSize="inherit"/></ContactIcon>
+                <ContactIcon target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/adityaiwd/"><LinkedInIcon fontSize="inherit"/></ContactIcon>
                 <ContactIcon target="_blank" rel="noopener noreferrer" href="https://t.me/adwicaksono"><TelegramIcon fontSize="inherit"/></ContactIcon>
             </ContactIconWrapper>
             <Footer>copyright &copy; {Year}, Wicak</Footer>

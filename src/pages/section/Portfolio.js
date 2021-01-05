@@ -7,9 +7,14 @@ import { graphql, useStaticQuery } from "gatsby";
 
 const PortfolioWrapper = styled.div`
   padding:10rem 0;
+  width:90%;
   display: flex;
   flex:1;
   flex-direction: column;
+  @media only screen and (max-width:56.25em){
+        
+        align-items:center;
+    } 
 `
 const PortfolioContent = styled.div`
   margin: 7rem 0;

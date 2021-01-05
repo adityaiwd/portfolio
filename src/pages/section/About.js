@@ -8,9 +8,12 @@ import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
 
 const AboutWrapper = styled.div`
   padding:10rem 0;
+  margin: 0 auto;
+  width:90%;
   display: flex;
   flex-direction: column;
   align-items:center;
+  
 `
 
 const StackTitle = styled.h1`

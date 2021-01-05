@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import styled from 'styled-components'
 import Logo from '../../images/logo.png'
 
@@ -10,15 +10,15 @@ const Nav = styled.nav`
     opacity: .7;
     width: 100%;
     box-shadow: 0 .4rem .4rem rgba(0,0,0,.25);
-    padding: 0 32.4rem;
+    padding: 0 11%;
     align-items:center;
     z-index:10;
+    justify-content: space-between;
 `
 
 const Navigation = styled.div`
     position:relative;
     display:flex;
-    margin-left: auto; 
 `
 
 const NavItem = styled.a`
@@ -36,7 +36,10 @@ const NavItem = styled.a`
 `
 
 const NavLogo = styled.img`
-    height:5rem;
+    height:4rem;
+    position:relative;
+    display:flex;
+    justify-self: flex-start;
 `
 
 

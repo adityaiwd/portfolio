@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import rehypeReact from "rehype-react";
 import ButtonLink from "./ButtonLink";
-import LinkIcon from '@material-ui/icons/Link';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkIcon from "@material-ui/icons/Link";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 const renderCustom = new rehypeReact({
   createElement: React.createElement,
@@ -15,19 +15,35 @@ const Wrapper = styled.div`
   &:not(:last-child) {
     margin-bottom: 10rem;
   }
+  margin:0 auto;
+  @media only screen and (max-width: 56.25em) {
+    width: 90%;
+    flex-wrap: wrap-reverse;
+    justify-content:center;
+  }
 `;
 
 const ProjectImage = styled.img`
   border-radius: 0.5rem;
-  width: 50rem;
-  
+  width: 100%;
+  height:100%;
+  flex: 0 0 45%;
+  overflow:hidden;
+
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.25);
+  @media only screen and (max-width: 56.25em) {
+    margin-bottom: 4rem;
+    flex: 0 0 100%;
+  }
 `;
 const ProjectContent = styled.div`
   display: flex;
   flex-direction: column;
   flex: 0 0 50%;
   line-height: 1.8;
+  @media only screen and (max-width: 56.25em) {
+    flex: 0 0 100%;
+  }
 `;
 const Stack = styled.p`
   text-transform: uppercase;
@@ -53,17 +69,17 @@ const ProjectTitle = styled.div`
     text-transform: uppercase;
     color: white;
     font-weight: 400;
-    transform: skewX(15deg)
+    transform: skewX(15deg);
   }
 `;
 
 const ButtonWrapper = styled.div`
-    display: flex;
-    margin-top: 3rem;
-    & > *:not(:last-child){
-        margin-right:5rem;
-    }
-`
+  display: flex;
+  margin-top: 3rem;
+  & > *:not(:last-child) {
+    margin-right: 5rem;
+  }
+`;
 
 const ProjectTemplate = ({ project }) => {
   const { title, site, sourcecode, stack, image } = project.frontmatter;
@@ -76,8 +92,21 @@ const ProjectTemplate = ({ project }) => {
         <ProjectDesc>{renderCustom(project.htmlAst)}</ProjectDesc>
         <Stack>{stack}</Stack>
         <ButtonWrapper>
-            <ButtonLink href={sourcecode} style={{backgroundColor:"transparent",border:"1px solid #000", color:"#000",boxShadow:"none"}}><GitHubIcon style={{marginRight:"1rem"}}/>source</ButtonLink>
-            <ButtonLink href={site}><LinkIcon style={{marginRight:"1rem"}}/> visit</ButtonLink>
+          <ButtonLink
+            href={sourcecode}
+            style={{
+              backgroundColor: "transparent",
+              border: "1px solid #000",
+              color: "#000",
+              boxShadow: "none",
+            }}
+          >
+            <GitHubIcon style={{ marginRight: "1rem" }} />
+            source
+          </ButtonLink>
+          <ButtonLink href={site}>
+            <LinkIcon style={{ marginRight: "1rem" }} /> visit
+          </ButtonLink>
         </ButtonWrapper>
       </ProjectContent>
       <ProjectImage src={image.childImageSharp.fluid.src} alt="image" />

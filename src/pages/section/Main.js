@@ -4,7 +4,8 @@ import Logo from '../../images/logo.png'
 
 const MainContainer = styled.header`
     min-height:100vh;
-    width:100%;
+    width: 90%;
+    margin: 0 auto;
     display:flex;
     align-items: flex-start;
     justify-content:center;
@@ -14,7 +15,6 @@ const MainContainer = styled.header`
 const Title = styled.h1`
     font-weight:200;
     font-size: 7rem;
-    width: 36rem;
 `
 
 const Name = styled.span`
@@ -43,9 +43,9 @@ const BackgroundLogo = styled.img`
 const Main = () => {
     return (
         <MainContainer>
-            <Title>Hello <span role="img" aria-label="wave">👋🏼</span>, I’m <Name>Wicak</Name></Title>
+            <Title>Hello <span role="img" aria-label="wave">👋🏼</span>,<br /> I’m <Name>Wicak</Name></Title>
             <SubTitle>An <span>Enthusiastic</span> Front-end Developer</SubTitle>
-            <BackgroundLogo src={Logo} alt="logo" />
+            {/* <BackgroundLogo src={Logo} alt="logo" /> */}
         </MainContainer>
     )
 }
