@@ -7,7 +7,7 @@ stages:
 build_app:
   stage: build
   script:
-  - npm install libtool automake autoconf nasm libpng pkg-config
+  - npm install autoconf nasm
   - yarn install
   - yarn build
   artifacts:
