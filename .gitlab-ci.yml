@@ -7,7 +7,7 @@ stages:
 build_app:
   stage: build
   script:
-  - sudo apt-get install libpng-dev
+  - npm install libtool automake autoconf nasm libpng pkg-config
   - yarn install
   - yarn build
   artifacts:
