@@ -75,7 +75,6 @@ const About = () => {
       }
     }
   `);
-  console.log(data)
   return (
     <AboutWrapper name="about">
       <SectionTitle title="About Me" subtitle="Let me introduce myself" style={{alignSelf:"flex-start"}}/>
