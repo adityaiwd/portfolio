@@ -1,7 +1,7 @@
 ---
 title: 'Wicak Portfolio'
 site: ''
-sourcecode: ''
+sourcecode: 'https://github.com/adityaiwd/portfolio'
 stack: 'React - Styled Components - Gatsby'
 image: 'portfolio.png'
 ---
