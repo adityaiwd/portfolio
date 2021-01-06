@@ -7,7 +7,6 @@ stages:
 build_app:
   stage: build
   script:
-  - npm install autoconf nasm
   - yarn install
   - yarn build
   artifacts:
