@@ -51,7 +51,7 @@ const Footer = styled.p`
 const Contact = () => {
     const Year = new Date().getFullYear()
     return (
-        <ContactWrapper>
+        <ContactWrapper id="contact">
             <SectionTitle title="Contact" subtitle="You can find me at :" style={{textAlign:"center"}}/>
             <Email>adityad.wck@gmail.com</Email>
             <ContactIconWrapper>

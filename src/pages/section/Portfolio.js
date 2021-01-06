@@ -55,7 +55,7 @@ const Portfolio = () => {
   `);
   console.log(data)
     return (
-        <PortfolioWrapper>
+        <PortfolioWrapper id="portfolio">
             <SectionTitle title="Portfolio" subtitle="Check out some projects that I’ve made" style={{alignSelf:"flex-start"}}/>
             <PortfolioContent>
                 {data.edges.map(item => (

@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
- 
+import { createGlobalStyle } from "styled-components";
+
 const GlobalStyle = createGlobalStyle`
   * {
   padding: 0;
@@ -21,6 +21,9 @@ html {
     @media only screen and (max-width:56.25em){
         font-size: 50%;
     } 
+    @media only screen and (max-width:37.5em){
+        font-size: 43.75%;
+    } 
 }
 
 body {
@@ -34,5 +37,5 @@ body {
   min-height: 100vh;
 }
 `;
- 
+
 export default GlobalStyle;

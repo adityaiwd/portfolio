@@ -98,7 +98,6 @@ const ProjectTemplate = ({ project }) => {
               backgroundColor: "transparent",
               border: "1px solid #000",
               color: "#000",
-              boxShadow: "none",
             }}
           >
             <GitHubIcon style={{ marginRight: "1rem" }} />

@@ -5,6 +5,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import rehypeReact from "rehype-react";
 import ButtonLink from "../components/ButtonLink";
 import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
+import {Link} from 'react-scroll';
 
 const AboutWrapper = styled.div`
   padding:10rem 0;
@@ -21,6 +22,7 @@ const StackTitle = styled.h1`
   margin-bottom: 2rem;
   color: #000;
   font-weight: bold;
+  text-align:center;
 `
 
 const Stack = styled.p`
@@ -49,6 +51,7 @@ const AboutContent = styled.div`
     color: #000;
     font-weight: 600;
     transition: color 0.2s ease-out;
+    cursor:pointer;
     &:hover {
       color: #17bebb;
     }
@@ -56,6 +59,7 @@ const AboutContent = styled.div`
 `;
 const renderCustom = new rehypeReact({
   createElement: React.createElement,
+  components:{'scroll':Link}
 }).Compiler;
 
 const About = () => {
@@ -71,8 +75,9 @@ const About = () => {
       }
     }
   `);
+  console.log(data)
   return (
-    <AboutWrapper >
+    <AboutWrapper name="about">
       <SectionTitle title="About Me" subtitle="Let me introduce myself" style={{alignSelf:"flex-start"}}/>
       <AboutContent>{renderCustom(data.file.childMarkdownRemark.htmlAst)}</AboutContent>
       <StackTitle>My Current Stack of Languages/Technologies are :</StackTitle>

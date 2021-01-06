@@ -7,9 +7,9 @@ const MainContainer = styled.header`
     width: 90%;
     margin: 0 auto;
     display:flex;
-    align-items: flex-start;
     justify-content:center;
     flex-direction: column;
+    position:relative;
 `
 
 const Title = styled.h1`
@@ -33,19 +33,40 @@ const SubTitle = styled.h3`
 
 const BackgroundLogo = styled.img`
     position:absolute !important;
-    width:90rem;
-    z-index:-1;
-    opacity: 0.3;
-    right: -38%;
+    width:80%;
+    z-index:-10;
+    opacity: 0.15;
+    top:15%;
+    right:-47.5%;
+    overflow:hidden;
     transform: rotate(-90deg);
+    @media only screen and (max-width:100em) {
+    right: -24%;
+    top: 15%;
+    width: 70%;
+    }
+  @media only screen and (max-width:81.25em) {
+    top: 17%;
+    right: -16%;
+    width:65%;
+  }
+  @media only screen and (max-width:68.75em) {
+    top: 5%;
+    width:55%;
+  }
+  @media only screen and (max-width:37.5em) {
+    top: 6%;
+    width: 55%;
+    right:-11%;
+  }
 `
 
 const Main = () => {
     return (
-        <MainContainer>
+        <MainContainer id="main">
             <Title>Hello <span role="img" aria-label="wave">👋🏼</span>,<br /> I’m <Name>Wicak</Name></Title>
             <SubTitle>An <span>Enthusiastic</span> Front-end Developer</SubTitle>
-            {/* <BackgroundLogo src={Logo} alt="logo" /> */}
+            <BackgroundLogo src={Logo} alt="logo" />
         </MainContainer>
     )
 }
