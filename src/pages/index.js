@@ -6,10 +6,12 @@ import Main from "../section/Main";
 import About from "../section/About";
 import Portfolio from "../section/Portfolio";
 import Contact from "../section/Contact";
+import Helmet from "react-helmet";
 
 const index = () => {
   return (
     <div>
+    <Helmet title="dev-wicak"/>
       <GlobalStyle />
       <Navbar />
       <Container>
