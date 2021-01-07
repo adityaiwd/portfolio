@@ -11,7 +11,7 @@ build_app:
   - yarn build
   artifacts:
     paths:
-    - build
+    - public
     expire_in: 1 day
 
 deploy_draft:
