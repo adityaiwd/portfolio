@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Logo from "../../images/logo.png";
+import Logo from "../images/logo.png";
 import HamburgerMenu from "react-hamburger-menu";
 import { Link } from "react-scroll";
 

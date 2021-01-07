@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Logo from '../../images/logo.png'
+import Logo from '../images/logo.png'
 
 const MainContainer = styled.header`
     min-height:100vh;

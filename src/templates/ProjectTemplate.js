@@ -1,13 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import rehypeReact from "rehype-react";
-import ButtonLink from "./ButtonLink";
+import ButtonLink from "../components/ButtonLink";
 import LinkIcon from "@material-ui/icons/Link";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
-const renderCustom = new rehypeReact({
-  createElement: React.createElement,
-}).Compiler;
 
 const Wrapper = styled.div`
   display: flex;
@@ -52,7 +48,7 @@ const Stack = styled.p`
   color: #1f7a8c;
 `;
 
-const ProjectDesc = styled.p`
+const ProjectDesc = styled.div`
   text-align: justify;
   margin: 2rem 0;
   font-size: 1.4rem;
@@ -89,7 +85,7 @@ const ProjectTemplate = ({ project }) => {
         <ProjectTitle>
           <h1>{title}</h1>
         </ProjectTitle>
-        <ProjectDesc>{renderCustom(project.htmlAst)}</ProjectDesc>
+        <ProjectDesc dangerouslySetInnerHTML={{ __html: project.html }} />
         <Stack>{stack}</Stack>
         <ButtonWrapper>
           <ButtonLink

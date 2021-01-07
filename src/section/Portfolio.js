@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 import SectionTitle from "../components/SectionTitle";
-import ProjectTemplate from "../components/ProjectTemplate";
+import ProjectTemplate from "../templates/ProjectTemplate";
 import { graphql, useStaticQuery } from "gatsby";
 
 
@@ -45,7 +45,7 @@ const Portfolio = () => {
                     }
                   }
                 }
-                htmlAst
+                html
             }
             id
             }
@@ -53,7 +53,6 @@ const Portfolio = () => {
         }
       }
   `);
-  console.log(data)
     return (
         <PortfolioWrapper id="portfolio">
             <SectionTitle title="Portfolio" subtitle="Check out some projects that I’ve made" style={{alignSelf:"flex-start"}}/>
