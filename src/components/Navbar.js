@@ -26,6 +26,9 @@ const NavWrapper = styled.div`
 const Navigation = styled.div`
   position: relative;
   display: flex;
+  @media only screen and (max-width: 37.5em) {
+    display: none;
+  }
 `;
 
 const NavItem = styled(Link)`
@@ -40,7 +43,6 @@ const NavItem = styled(Link)`
   &:hover {
     color: #17bebb;
   }
-  
 `;
 
 const NavLogo = styled.img`
@@ -53,30 +55,29 @@ const NavLogo = styled.img`
 
 const NavigationMobile = styled.div`
   width: 78%;
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   margin: 2rem auto;
 `;
 
 const NavItemMobile = styled(Link)`
-font-size: 1.2rem;
-font-weight: bold;
-text-transform: uppercase;
-cursor: pointer;
-transition: all 0.2s;
-text-align:center;
-&:not(:last-child) {
-  margin-bottom: 3rem;
-}
-&:hover {
-  color: #17bebb;
-}
-
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  &:hover {
+    color: #17bebb;
+  }
 `;
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(null);
-  const [openedMenu,setOpenedMenu] = useState(false);
+  const [openedMenu, setOpenedMenu] = useState(false);
 
   const changeMobile = () => {
     window.matchMedia("(max-width: 37.5em)").matches
@@ -121,17 +122,17 @@ const Navbar = () => {
         )}
       </NavWrapper>
       {openedMenu && (
-          <NavigationMobile>
-            <NavItemMobile to="about" smooth={true} duration={500}>
-              About Me
-            </NavItemMobile>
-            <NavItemMobile to="portfolio" smooth={true} duration={500}>
-              Portfolio
-            </NavItemMobile>
-            <NavItemMobile to="contact" smooth={true} duration={500}>
-              Contact
-            </NavItemMobile>
-          </NavigationMobile>
+        <NavigationMobile>
+          <NavItemMobile to="about" smooth={true} duration={500}>
+            About Me
+          </NavItemMobile>
+          <NavItemMobile to="portfolio" smooth={true} duration={500}>
+            Portfolio
+          </NavItemMobile>
+          <NavItemMobile to="contact" smooth={true} duration={500}>
+            Contact
+          </NavItemMobile>
+        </NavigationMobile>
       )}
     </Nav>
   );
