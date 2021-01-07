@@ -1,6 +1,6 @@
 ---
 title: 'Wicak Portfolio'
-site: ''
+site: 'https://dev-wicak.netlify.app/'
 sourcecode: 'https://github.com/adityaiwd/portfolio'
 stack: 'React - Styled Components - Gatsby'
 image: 'portfolio.png'
