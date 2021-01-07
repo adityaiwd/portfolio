@@ -11,7 +11,7 @@ import Helmet from "react-helmet";
 const index = () => {
   return (
     <div>
-    <Helmet title="dev-wicak"/>
+    <Helmet title="Wicak | Front-end Developer"/>
       <GlobalStyle />
       <Navbar />
       <Container>
