@@ -94,7 +94,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <Nav style={{height: openedMenu && isMobile ? "22rem" : "7rem",transition: "all 0.5s"}}>
+    <Nav style={{height: openedMenu && isMobile ? "23rem" : "7rem",transition: "all 0.5s"}}>
       <NavWrapper>
         <Link to="main" smooth={true} duration={500}>
           <NavLogo src={Logo} alt="logo" />
@@ -125,13 +125,13 @@ const Navbar = () => {
       </NavWrapper>
       {(openedMenu && isMobile) && (
         <NavigationMobile>
-          <NavItemMobile to="about" smooth={true} duration={500}>
+          <NavItemMobile onClick={() => setOpenedMenu(false)} to="about" smooth={true} duration={500}>
             About Me
           </NavItemMobile>
-          <NavItemMobile to="portfolio" smooth={true} duration={500}>
+          <NavItemMobile onClick={() => setOpenedMenu(false)} to="portfolio" smooth={true} duration={500}>
             Portfolio
           </NavItemMobile>
-          <NavItemMobile to="contact" smooth={true} duration={500}>
+          <NavItemMobile onClick={() => setOpenedMenu(false)} to="contact" smooth={true} duration={500}>
             Contact
           </NavItemMobile>
         </NavigationMobile>
