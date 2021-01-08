@@ -13,7 +13,6 @@ const Nav = styled.nav`
   box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
   padding: 1.5rem 0;
   z-index: 10;
-  transition: all 0.5s;
 `;
 const NavWrapper = styled.div`
   width: 78%;
@@ -21,6 +20,7 @@ const NavWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 `;
 
 const Navigation = styled.div`
@@ -58,6 +58,8 @@ const NavigationMobile = styled.div`
   display: flex;
   flex-direction: column;
   margin: 2rem auto;
+  animation: moveInTop 0.4s ease-out 0.4s;
+  animation-fill-mode: backwards;
 `;
 
 const NavItemMobile = styled(Link)`
@@ -92,7 +94,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <Nav>
+    <Nav style={{height: openedMenu && isMobile ? "22rem" : "7rem",transition: "all 0.5s"}}>
       <NavWrapper>
         <Link to="main" smooth={true} duration={500}>
           <NavLogo src={Logo} alt="logo" />
@@ -121,7 +123,7 @@ const Navbar = () => {
           </Navigation>
         )}
       </NavWrapper>
-      {openedMenu && (
+      {(openedMenu && isMobile) && (
         <NavigationMobile>
           <NavItemMobile to="about" smooth={true} duration={500}>
             About Me

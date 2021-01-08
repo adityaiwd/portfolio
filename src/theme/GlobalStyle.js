@@ -36,6 +36,18 @@ body {
   
   min-height: 100vh;
 }
+
+@keyframes moveInTop {
+  0% {
+      opacity: 0;
+      transform: translateY(-3rem);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
 `;
 
 export default GlobalStyle;
