@@ -1,4 +1,17 @@
 module.exports = {
+  siteMetadata: {
+    title: `Wicak | Front-end Developer`,
+    description: `I’m Wicak, a 20 years old self-taught Front-end developer, from Bogor.`,
+    author: `Wicak`,
+    siteUrl: 'https://dev-wicak.netlify.app',
+    social: {
+      linkedin: 'adityaiwd',
+      telegram: 'adwicaksono',
+      github: 'adityaiwd',
+      email: 'adityad.wck@gmail.com'
+    },
+    imageShare: `share.jpg`
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
@@ -41,5 +54,6 @@ module.exports = {
         ]
       }
     },
+    `gatsby-plugin-offline`
   ],
 };
