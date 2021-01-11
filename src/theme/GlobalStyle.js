@@ -48,6 +48,19 @@ body {
       transform: translate(0);
     }
   }
+
+  ::selection{
+    background-color: #17bebb;
+    color: #Fff;
+  }
+
+  input,
+  textarea,
+  button,
+  select,
+  a{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+  }
 `;
 
 export default GlobalStyle;
