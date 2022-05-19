@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Wicak | Front-end Developer`,
-    description: `I’m Wicak, a 20 years old self-taught Front-end developer, from Bogor.`,
+    description: `I’m Wicak, a 22 years old Front-end Developer, from Bogor, West Java, Indonesia.`,
     author: `Wicak`,
     siteUrl: 'https://dev-wicak.netlify.app',
     social: {
