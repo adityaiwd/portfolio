@@ -23,6 +23,9 @@ const ProjectImage = styled.img`
   border-radius: 0.5rem;
   width: 100%;
   height:100%;
+  max-height:720px;
+  object-fit: cover;
+  object-position: top;
   flex: 0 0 45%;
   overflow:hidden;
 
@@ -88,7 +91,7 @@ const ProjectTemplate = ({ project }) => {
         <ProjectDesc dangerouslySetInnerHTML={{ __html: project.html }} />
         <Stack>{stack}</Stack>
         <ButtonWrapper>
-          <ButtonLink
+          {sourcecode && <ButtonLink
             href={sourcecode}
             style={{
               backgroundColor: "transparent",
@@ -98,10 +101,10 @@ const ProjectTemplate = ({ project }) => {
           >
             <GitHubIcon style={{ marginRight: "1rem" }} />
             source
-          </ButtonLink>
-          <ButtonLink href={site}>
+          </ButtonLink>}
+          {site && <ButtonLink href={site}>
             <LinkIcon style={{ marginRight: "1rem" }} /> visit
-          </ButtonLink>
+          </ButtonLink>}
         </ButtonWrapper>
       </ProjectContent>
       <ProjectImage src={image.childImageSharp.fluid.src} alt="image" />
