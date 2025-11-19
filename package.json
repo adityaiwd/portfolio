@@ -43,8 +43,5 @@
     "react-scroll": "^1.8.1",
     "rehype-react": "^6.1.0",
     "styled-components": "^5.2.1"
-  },
-  "engines": {
-    "node": "16.x"
   }
 }
